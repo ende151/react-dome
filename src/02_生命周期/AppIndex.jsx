@@ -28,8 +28,9 @@ class AppIndex extends React.Component {
     console.log('AppIndex componentDidMount','我是挂载的时候现实的')
   }
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log(prevProps, prevState);
-    console.log('AppIndex getSnapshotBeforeUpdate','我是更新之前的时候现实的');
+    return {
+      Data : '更新之前的数据100'
+    }
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log(prevProps, prevState, snapshot);
