@@ -2,7 +2,8 @@ import React from 'react';
 // import HelloWord from './01_函数式组件和类组件/01_class_App';
 // import App from './01_函数式组件和类组件/02_func_App';
 // import AppIndex from './02_生命周期/AppIndex';
-import App from './03_组件拆分和嵌套关系/App';
+// import App from './03_组件拆分和嵌套关系/App';
+import AppIndex from './04_父子组件通讯/AppIndex';
 
 
 class MyComponent extends React.Component { 
@@ -22,8 +23,9 @@ class MyComponent extends React.Component {
         // const {isShow} = this.state;
         return (
             <div>
+                <AppIndex/>
                 {/* <button onClick={e => this.handleIsShow()}>隐藏整个内容</button> */}
-                <App/>
+                {/* <App/> */}
                 {/* { isShow && <AppIndex /> } */}
                 {/* <div> 我是一个组件：{massage} </div> */}
                 {/* <HelloWord/>
