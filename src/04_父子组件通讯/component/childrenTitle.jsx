@@ -13,7 +13,7 @@ class childrenTitle extends Component {
                     {
                         list.map((item) => {
                             return (
-                                <div key={item.id} onClick={() => this.handleTitle(item)} style={{ color : activeIndex === item.id ? 'red' : 'black' }}>{item.name}</div>
+                                <div key={item.id} onClick={() => this.handleTitle(item)} style={{ color : activeIndex === item.id ? 'red' : '' }}>{item.name}</div>
                             )
                         })
                     }

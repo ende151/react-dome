@@ -8,6 +8,8 @@ class children3 extends Component {
             </div>
         );
     }
+    componentDidMount() {
+        console.log('我是子级3')
+    }
 }
-
 export default children3;
