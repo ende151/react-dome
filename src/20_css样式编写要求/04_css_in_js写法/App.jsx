@@ -1,6 +1,6 @@
 
 import React, { PureComponent } from 'react'
-import { Title, HHHH, DefaultStyle } from './style/App'
+import { Title, HHHH, DefaultStyle,DefaultStyls } from './style/App'
 
 export class App extends PureComponent {
     constructor() {
@@ -26,6 +26,12 @@ export class App extends PureComponent {
                         33333
                     </span>
                 </DefaultStyle>
+                <DefaultStyls color={color}>
+                    我是身体
+                    <span>
+                        33333
+                    </span>
+                </DefaultStyls>
                 <div className='footer'>
                     我是底部
                     <span>

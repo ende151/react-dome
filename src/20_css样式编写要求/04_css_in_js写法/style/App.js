@@ -19,10 +19,19 @@ font-size: 40px;
 
 // 3、在不传入一些默认值的时候  我们可以通过 attrs 设置些默认值
 //    也就是通过props接收参数 来动态设定我们的样式内容
-//    注意不要使用 props.color  而是使用 不然会陷入回调地狱中   
+//    注意不要使用 props.color  而是使用 不然会陷入回调地狱中
 export const DefaultStyle = styled.div.attrs({
     pageTypeColor: props => props.color || 'red'
 })`
+font-size: 40px;
+color:${props => props.pageTypeColor};
+`;
+// 以上写法定义的默认值会出现问题
+// 这是修改后的 代码
+//
+export const DefaultStyls = styled.div.attrs(props => ({
+    pageTypeColor: props.color || 'red'
+}))`
 font-size: 40px;
 color:${props => props.pageTypeColor};
 `;

@@ -38,8 +38,11 @@ class MyComponent extends React.Component {
     render() {
         // const {isShow} = this.state;
         return (
-            <div> 
+            <div>
                 <AppIndex />
+
+
+
                 {/* <AppIndex age="20"/> */}
                 {/* <AppIndex
                     leftSlot={111}
