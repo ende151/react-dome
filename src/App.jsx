@@ -19,8 +19,14 @@ import React from 'react';
 // import AppIndex from './14_高阶组件/AppIndex';
 // import AppIndex from './15_protal的使用/AppIndex';
 // import AppIndex from './16_Fragment的使用/AppIndex';
-import AppIndex from './20_css样式编写要求/AppIndex';
 
+
+// import AppIndex from './20_css样式编写要求/AppIndex';
+
+
+// import AppIndex from "./30_redux/01_Redux的基本理念/AppIndex";
+// import AppIndex from "./30_redux/02_redux_基础数据/AppIndex";
+import AppIndex from "./30_redux/03_Redux优化/AppIndex";
 
 class MyComponent extends React.Component {
     constructor() {
@@ -40,9 +46,6 @@ class MyComponent extends React.Component {
         return (
             <div>
                 <AppIndex />
-
-
-
                 {/* <AppIndex age="20"/> */}
                 {/* <AppIndex
                     leftSlot={111}
