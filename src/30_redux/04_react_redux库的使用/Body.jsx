@@ -1,9 +1,9 @@
 import {PureComponent} from "react";
-// import store from "./store";
+import store from "./store";
 import {ADDNUM} from "./actionCreators";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 
-class Body extends PureComponent {
+class Body extends  PureComponent{
     // constructor() {
     //     super();
     //     this.state ={
@@ -16,17 +16,15 @@ class Body extends PureComponent {
     //         this.setState({num:state.num})
     //     })
     // }
-    addNUM() {
-        // store.dispatch(ADDNUM(1))
-        this.props.addNum(10)
+    addNUM(){
+        store.dispatch(ADDNUM(1))
     }
 
-
     render() {
-        const {num} = this.props
-        return (
+        const { num } = this.props
+        return(
             <div>
-                Body: {num}
+                Body:  {num}
                 <div>
                     <button onClick={() => {
                         this.addNUM()
@@ -38,17 +36,15 @@ class Body extends PureComponent {
     }
 }
 
-// function  mapStoreToProps (store){
-//     return {
-//         num:store.num
-//     }
-// }
+function  mapStoreToProps (store){
+    return {
+        num:store.num
+    }
+}
+function  mapActionToProps (store){
+    return {
+        num:store.num
+    }
+}
 
-const mapStoreToProps = (store) => ({
-    num: store.num
-})
-const mapDispatchToProps = (dispatch) => ({
-    addNum: (num) => dispatch(ADDNUM(num))
-})
-
-export default connect(mapStoreToProps, mapDispatchToProps)(Body)
+export default connect(mapStoreToProps,mapActionToProps)(Body)
