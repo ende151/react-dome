@@ -1,4 +1,5 @@
 import React from 'react';
+
 // import HelloWord from './01_函数式组件和类组件/01_class_App';
 // import App from './01_函数式组件和类组件/02_func_App';
 // import AppIndex from './02_生命周期/AppIndex';
@@ -19,14 +20,16 @@ import React from 'react';
 // import AppIndex from './14_高阶组件/AppIndex';
 // import AppIndex from './15_protal的使用/AppIndex';
 // import AppIndex from './16_Fragment的使用/AppIndex';
-
-
 // import AppIndex from './20_css样式编写要求/AppIndex';
-
 
 // import AppIndex from "./30_redux/01_Redux的基本理念/AppIndex";
 // import AppIndex from "./30_redux/02_redux_基础数据/AppIndex";
-import AppIndex from "./30_redux/03_Redux优化/AppIndex";
+// import AppIndex from "./30_redux/03_Redux优化/AppIndex";
+
+import AppIndex from "./30_redux/04_react_redux库的使用/AppIndex";
+import {Provider} from "react-redux";
+import store from "./30_redux/04_react_redux库的使用/store";
+
 
 class MyComponent extends React.Component {
     constructor() {
@@ -36,16 +39,21 @@ class MyComponent extends React.Component {
             // isShow: true
         }
     }
+
     handleIsShow() {
         this.setState({
             isShow: !this.state.isShow
         })
     }
+
     render() {
         // const {isShow} = this.state;
         return (
             <div>
-                <AppIndex />
+                <Provider store={store}>
+                    <AppIndex/>
+                </Provider>
+
                 {/* <AppIndex age="20"/> */}
                 {/* <AppIndex
                     leftSlot={111}
